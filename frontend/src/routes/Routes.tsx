@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import styled from 'styled-components'
-import { Route, Switch } from 'react-router-dom'
+import { Redirect, Route, Switch } from 'react-router-dom'
 import LoadingSpin from '../components/LoadingSpin'
 
 export enum PATHS {
@@ -23,6 +23,7 @@ export default class Routes extends React.Component {
             <Route exact path={PATHS.HOME_PAGE} component={Home} />
             <Route exact path={PATHS.LOGIN_PAGE} component={Login} />
             <Route exact path={PATHS.SIGNUP_PAGE} component={Signup} />
+            <Redirect to={PATHS.HOME_PAGE} />
           </Switch>
         </Suspense>
       </Root>

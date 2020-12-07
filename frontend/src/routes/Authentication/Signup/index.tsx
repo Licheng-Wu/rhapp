@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import SignUpCard from '../../../components/SignUpCard'
 
 const MainContainer = styled.div`
   height: 100%;
@@ -9,6 +10,10 @@ const MainContainer = styled.div`
 
 export default class Signup extends React.Component {
   render() {
-    return <MainContainer>Hello Signup Boy</MainContainer>
+    return (
+      <>
+        <SignUpCard />
+      </>
+    )
   }
 }
